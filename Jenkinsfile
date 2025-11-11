@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo './hello.sh'
+                chmod +x hello.sh
+                sh 'hello.sh'
             }
         }
     }
